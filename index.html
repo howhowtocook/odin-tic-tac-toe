@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic tac toe</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="heading">Advertising Game</div>
+
+    <div class="description">
+        <p>Assuming there are two cafes, Cafe A and Cafe B, with a fixed total number of customers in the block. The current income for each cafe is $100 per month. If Cafe A invests $30 in advertising while Cafe B doesn't advertise, Cafe A will earn $200, and Cafe B will earn $50.</p>
+
+        <p>Conversely, if both cafes invest $30 in advertising, their incomes will decrease to $70 each due to the shared customer base. Now, imagine you own Cafe B while the computer controls Cafe A. Your objective is to maximize your earnings over the long term.</p>
+
+        <p>Hence, you need to choose the best strategy to ensure a steady stream of income amidst competition.</p>
+    </div>
+
+    <form class="month-form">
+        <label for="months">Enter your Cafe operating months : </label>
+        <input type="number" id="months" name="months" min="1" value="12" placeholder="12">
+        <input type="submit" value="Submit">
+    </form>
+    
+
+      <div class="gameArea">
+
+        <div class="computerChoices">
+          <h3>Computer's Choices</h3>
+          <div class="button-container">
+          <button class='choice' id="computerAdvertise">Advertise</button>
+          <button class='choice' id="computerNoAdvertise">Do not Advertise</button>
+        </div></div>
+
+        <div class="scoreArea">
+          <div class="areaA">
+            <h4>Cafe A</h4>
+            <div class="bar-container">
+            <div class="scoreBarA"></div>
+            <div class="score" id="cafeAScore">0</div>
+          </div></div>
+
+          <div class="areaB">
+            <h4>Cafe B</h4>
+            <div class="bar-container">
+            <div class="scoreBarB"></div>
+            <div class="score" id="cafeBScore">0</div>
+          </div></div>
+        </div>
+
+        <div class="userChoices">
+          <h3>Your Choices</h3>
+          <div class="button-container">
+          <button class='choice' id="userAdvertise">Advertise</button>
+          <button class='choice' id="userNoAdvertise">Do not Advertise</button>
+        </div></div>
+
+      </div>
+    
+    <div class="strategy-table">
+    <div class="change_strategy">
+        <button id="tit-for-tat">Tit-for-Tat</button>
+        <button id="always-advertise">Always Advertise</button>
+        <button id="never-advertise">Never Advertise</button>
+        <button id="random">Random</button>
+    </div>
+    
+    <table class="score-table">
+        <caption>Final Score of Every Turn</caption>
+        <tr>
+          <th></th>
+          <th>Strategy: Tit-for-Tat</th>
+          <th>Strategy: Always Advertise</th>
+          <th>Strategy: Never Advertise</th>
+          <th>Strategy: Random</th>
+        </tr>
+        <tr>
+          <td>Cafe A</td>
+          <td id="A1"></td>
+          <td id="A2"></td>
+          <td id="A3"></td>
+          <td id="A4"></td>
+        </tr>
+        <tr>
+          <td>Cafe B</td>
+          <td id="B1"></td>
+          <td id="B2"></td>
+          <td id="B3"></td>
+          <td id="B4"></td>
+        </tr>
+      </table>
+      </div>
+      <script src="./scripts.js"></script>
+    </body>
+</html>
+
